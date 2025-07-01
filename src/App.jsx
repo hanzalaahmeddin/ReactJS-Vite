@@ -11,6 +11,7 @@ function App() {
     <>
       <h1>Hello React App</h1>
       <Header />
+      <h2>dsds</h2>
     </>
   )
 }
