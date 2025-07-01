@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Header'
+import First from './First'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,7 @@ function App() {
     <>
       <h1>Hello React App</h1>
       <Header />
-      <h2>dsds</h2>
+      <First />
     </>
   )
 }
