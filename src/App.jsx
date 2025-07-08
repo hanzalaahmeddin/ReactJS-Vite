@@ -17,6 +17,8 @@ import Inputt from './Inputt'
 import Form from './Form'
 import Maps from './Map'
 import ReuseMaps from './ReuseMaps'
+import Clock from './Clock'
+import DropdownClock from './DropdownClock'
 
 
 function App() {
@@ -70,6 +72,8 @@ function App() {
       <Form />
       <Maps />
       <ReuseMaps />
+      <DropdownClock />
+      {/* <Clock /> */}
     </>
   )
 }
