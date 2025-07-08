@@ -11,6 +11,13 @@ import Counter from './Counter'
 import Toggle from './Toggle'
 import Elseif from './Elseif'
 import User from './User'
+import Propuser from './Props'
+import Wrapper from './Wrapper'
+import Inputt from './Inputt'
+import Form from './Form'
+import Maps from './Map'
+import ReuseMaps from './ReuseMaps'
+
 
 function App() {
   const [display, setDisplay] = useState(false)
@@ -18,9 +25,17 @@ function App() {
   const changeCars = () => {
     setCars("Car2")
   }
-  let userName = "Hanzala"
-  let userAge = 26;
-  let userEmail = "hanzala@test.com"
+  // let userName = "Hanzala"
+  // let userAge = 26;
+  // let userEmail = "hanzala@test.com"
+  // ====== Pass Data Using Object
+  let userObj = {
+    name: "Hanzala",
+    age: 25,
+    email: "hanzala@gmail.com"
+  }
+
+
   return (
     <>
       <h1>Hello React App</h1>
@@ -44,7 +59,17 @@ function App() {
       }
       <h2><Elseif /></h2>
       <hr />
-      <User name="Hanzala" age={23} email="hanzala@test.com" />
+      {/* <User name="Hanzala" age={23} email="hanzala@test.com" /> */}
+      {/* <User name={userName} age={userAge} email={userEmail} /> */}
+      <User userData={userObj} />
+      <hr />
+      <Propuser name="Hanzala" />
+      <Propuser />
+      <Wrapper />
+      <Inputt />
+      <Form />
+      <Maps />
+      <ReuseMaps />
     </>
   )
 }
