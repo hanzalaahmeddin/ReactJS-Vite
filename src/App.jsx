@@ -74,6 +74,9 @@ function App() {
       <ReuseMaps />
       <DropdownClock />
       {/* <Clock /> */}
+      <div style={{ backgroundColor: "yellow", padding: "10px" }}>
+        <h1>context API</h1>
+      </div>
     </>
   )
 }
