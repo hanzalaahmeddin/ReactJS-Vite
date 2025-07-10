@@ -19,6 +19,8 @@ import Maps from './Map'
 import ReuseMaps from './ReuseMaps'
 import Clock from './Clock'
 import DropdownClock from './DropdownClock'
+import College from './College'
+import { SubjectContext } from './ContextData'
 
 
 function App() {
@@ -36,8 +38,7 @@ function App() {
     age: 25,
     email: "hanzala@gmail.com"
   }
-
-
+  const [subb, setSubb] = useState("English")
   return (
     <>
       <h1>Hello React App</h1>
@@ -74,8 +75,17 @@ function App() {
       <ReuseMaps />
       <DropdownClock />
       {/* <Clock /> */}
-      <div style={{ backgroundColor: "yellow", padding: "10px" }}>
-        <h1>context API</h1>
+      <div style={{ backgroundColor: "yellow", padding: "10px", color: "black" }}>
+        <SubjectContext.Provider value={subb}>
+          <select onChange={(event) => setSubb(event.target.value)}>
+            <option value="">Select Value</option>
+            <option value="Maths">Maths</option>
+            <option value="English">English</option>
+            <option value="Urdu">Urdu</option>
+          </select>
+          <h1>Context API</h1>
+          <College />
+        </SubjectContext.Provider>
       </div>
     </>
   )

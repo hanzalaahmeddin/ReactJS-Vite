@@ -1,7 +1,12 @@
+import ClassComp from "./ClassComp"
+
 function College() {
-  return (
-    <div><h1>College Componente</h1></div>
-  )
+    return (
+        <div style={{ backgroundColor: "orange", padding: "10px" }}>
+            <h1>College Component</h1>
+            <ClassComp />
+        </div>
+    )
 }
 
 export default College
